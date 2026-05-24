@@ -1,0 +1,93 @@
+# yaml-language-server: $schema=https://nfpm.goreleaser.com/schema.json
+name: bm-sidebar
+arch: "${PACKAGE_ARCH}"
+platform: linux
+version: "${PACKAGE_VERSION}"
+version_schema: semver
+release: "${PACKAGE_RELEASE}"
+section: utils
+priority: optional
+maintainer: "Relz <relz0071@gmail.com>"
+description: |
+  GTK4/libadwaita Bluetooth sidebar for Wayland desktops, usable from the CLI, app launchers, hotkeys, or Waybar.
+vendor: bm-sidebar
+homepage: "${PACKAGE_HOMEPAGE}"
+license: GPL-3.0-or-later
+contents:
+  - src: ./package-root/usr/bin/bm-sidebar
+    dst: /usr/bin/bm-sidebar
+    file_info:
+      mode: 0755
+      owner: root
+      group: root
+  - src: ./package-root/usr/libexec/bm-sidebar/bm-sidebar-gui
+    dst: /usr/libexec/bm-sidebar/bm-sidebar-gui
+    file_info:
+      mode: 0755
+      owner: root
+      group: root
+  - src: ./package-root/usr/share/bm-sidebar/bm-sidebar.css
+    dst: /usr/share/bm-sidebar/bm-sidebar.css
+    file_info:
+      mode: 0644
+      owner: root
+      group: root
+  - src: ./README.md
+    dst: /usr/share/doc/bm-sidebar/README.md
+    file_info:
+      mode: 0644
+      owner: root
+      group: root
+  - src: ./LICENSE
+    dst: /usr/share/doc/bm-sidebar/LICENSE
+    file_info:
+      mode: 0644
+      owner: root
+      group: root
+archlinux:
+  packager: "Relz <relz0071@gmail.com>"
+overrides:
+  deb:
+    depends:
+      - libglib2.0-0
+      - libgtk-4-1
+      - libadwaita-1-0 (>= 1.4)
+      - libjson-glib-1.0-0
+      - libgtk4-layer-shell0
+      - bluez
+      - bluez-obexd
+      - pulseaudio-utils
+      - rfkill
+  rpm:
+    depends:
+      - glib2
+      - gtk4
+      - libadwaita >= 1.4
+      - json-glib
+      - gtk4-layer-shell
+      - bluez
+      - bluez-obexd
+      - pulseaudio-utils
+      - rfkill
+  archlinux:
+    depends:
+      - glib2
+      - gtk4
+      - libadwaita>=1.4
+      - json-glib
+      - gtk4-layer-shell
+      - bluez
+      - bluez-utils
+      - libpulse
+      - util-linux
+  apk:
+    depends:
+      - glib
+      - gtk4.0
+      - libadwaita>=1.4
+      - json-glib
+      - gtk4-layer-shell
+      - bluez
+      - bluez-obexd
+      - pulseaudio-utils
+      - rfkill

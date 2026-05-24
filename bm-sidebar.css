@@ -1,0 +1,68 @@
+.bm-sidebar-window,
+.bm-sidebar-surface {
+  background: transparent;
+}
+
+dialog.bm-sidebar-dialog floating-sheet > dimming,
+dialog.bm-sidebar-dialog bottom-sheet > dimming {
+  background-color: rgba(0, 0, 0, 0.42);
+}
+
+.bm-sidebar-panel {
+  background: @window_bg_color;
+  border-left: 1px solid alpha(@window_fg_color, 0.12);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.06);
+  margin: 8px;
+}
+
+.bm-scroll-fade {
+  margin: 0;
+}
+
+.bm-scroll-fade-top {
+  background: linear-gradient(to bottom, @window_bg_color 0%, @window_bg_color 28%, alpha(@window_bg_color, 0.72) 58%, alpha(@window_bg_color, 0));
+}
+
+.bm-scroll-fade-bottom {
+  background: linear-gradient(to top, @window_bg_color 0%, @window_bg_color 28%, alpha(@window_bg_color, 0.72) 58%, alpha(@window_bg_color, 0));
+}
+
+.device-group {
+  margin-top: 6px;
+}
+
+.active-device-row {
+  background: alpha(@accent_bg_color, 0.12);
+}
+
+.active-device-row:hover {
+  background: alpha(@accent_bg_color, 0.18);
+}
+
+@keyframes connecting-pulse {
+  0%, 100% {
+    background: alpha(@accent_bg_color, 0);
+  }
+
+  50% {
+    background: alpha(@accent_bg_color, 0.14);
+  }
+}
+
+.connecting-device-row {
+  animation: connecting-pulse 1.4s ease-in-out infinite;
+  background: alpha(@accent_bg_color, 0.14);
+}
+
+.connecting-device-row:hover {
+  background: alpha(@accent_bg_color, 0.20);
+}
+
+.blocked-device-row {
+  background: alpha(@error_bg_color, 0.14);
+}
+
+.blocked-device-row:hover {
+  background: alpha(@error_bg_color, 0.20);
+}

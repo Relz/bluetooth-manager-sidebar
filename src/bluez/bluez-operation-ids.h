@@ -1,0 +1,15 @@
+#pragma once
+
+#define BLUEZ_OPERATION_SET_POWER "set_adapter_power"
+#define BLUEZ_OPERATION_SET_DISCOVERABLE "set_adapter_discoverable"
+#define BLUEZ_OPERATION_TOGGLE_DISCOVERY "toggle_discovery"
+#define BLUEZ_OPERATION_START_DISCOVERY "start_discovery"
+#define BLUEZ_OPERATION_STOP_DISCOVERY "stop_discovery"
+#define BLUEZ_OPERATION_CONNECT_DEVICE "connect_device"
+#define BLUEZ_OPERATION_DISCONNECT_DEVICE "disconnect_device"
+#define BLUEZ_OPERATION_PAIR_DEVICE "pair_device"
+#define BLUEZ_OPERATION_TRUST_DEVICE "trust_device"
+#define BLUEZ_OPERATION_SET_DEVICE_ALIAS "set_device_alias"
+#define BLUEZ_OPERATION_SET_DEVICE_TRUSTED "set_device_trusted"
+#define BLUEZ_OPERATION_SET_DEVICE_BLOCKED "set_device_blocked"
+#define BLUEZ_OPERATION_REMOVE_DEVICE "remove_device"

@@ -1,0 +1,10 @@
+#!/bin/sh
+set -eu
+
+app_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+if [ -x "$app_dir/build/src/bm-sidebar" ]; then
+  exec "$app_dir/build/src/bm-sidebar" "$@"
+fi
+
+printf '%s\n' 'bm-sidebar: native binary not built; run meson setup build && meson compile -C build' >&2
+exit 1
