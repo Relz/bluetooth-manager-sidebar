@@ -5,6 +5,7 @@ pkgdesc='GTK4/libadwaita Bluetooth sidebar for Wayland desktops'
 arch=('x86_64')
 url='@GITHUB_SERVER_URL@/@GITHUB_REPOSITORY@'
 license=('GPL-3.0-or-later')
+keywords=('bluetooth' 'bluetooth-manager' 'bluez' 'wayland' 'layer-shell' 'sidebar' 'gtk4' 'libadwaita' 'obex' 'file-transfer')
 depends=(
   'glib2'
   'gtk4'
