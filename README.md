@@ -108,12 +108,6 @@ meson compile -C build
 ./bm-sidebar --help
 ```
 
-Check CLI wiring through the local launcher:
-
-```sh
-/home/relz/.local/bin/bm-sidebar --help
-```
-
 After changing the Waybar config, reload Waybar with:
 
 ```sh
