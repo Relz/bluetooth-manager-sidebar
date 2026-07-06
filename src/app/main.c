@@ -6,6 +6,8 @@
 int
 main(int argc, char **argv)
 {
+  g_unsetenv("GTK_THEME");
+
   SidebarCommand command = SIDEBAR_COMMAND_TOGGLE;
   g_autoptr(GError) error = NULL;
 
