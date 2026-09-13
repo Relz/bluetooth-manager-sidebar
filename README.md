@@ -81,6 +81,28 @@ GitHub Actions also publishes AUR source metadata for `bm-sidebar` when the `AUR
 
 Native packages rely on distro-provided GLib 2.76 or newer, GTK 4.10 or newer, libadwaita 1.4 or newer, JSON-GLib, BlueZ, BlueZ OBEX, `gtk4-layer-shell`, `pactl`, and `rfkill`. Audio-profile dependency names vary by distro: Debian/Ubuntu and Fedora/RHEL-family packages use `pulseaudio-utils`, Arch Linux uses `libpulse`, and Alpine uses `pulseaudio-utils`. Arch Linux provides `rfkill` through `util-linux`.
 
+## Nix
+
+Run the application directly using Nix Flakes:
+
+```sh
+nix run
+```
+
+Build the package:
+
+```sh
+nix build
+```
+
+Or enter an interactive development shell:
+
+```sh
+nix develop
+```
+
+For non-flake environments, `default.nix` and `shell.nix` are also provided (`nix-build` and `nix-shell`).
+
 ## Project Layout
 
 - `bm-sidebar`: checkout launcher for the Meson-built native CLI.
