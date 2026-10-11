@@ -50,7 +50,7 @@ overrides:
   deb:
     depends:
       - libglib2.0-0
-      - libgtk-4-1
+      - libgtk-4-1 (>= 4.12)
       - libadwaita-1-0 (>= 1.4)
       - libjson-glib-1.0-0
       - libgtk4-layer-shell0
@@ -61,7 +61,7 @@ overrides:
   rpm:
     depends:
       - glib2
-      - gtk4
+      - gtk4 >= 4.12
       - libadwaita >= 1.4
       - json-glib
       - gtk4-layer-shell
@@ -72,7 +72,7 @@ overrides:
   archlinux:
     depends:
       - glib2
-      - gtk4
+      - gtk4>=4.12
       - libadwaita>=1.4
       - json-glib
       - gtk4-layer-shell
@@ -83,7 +83,7 @@ overrides:
   apk:
     depends:
       - glib
-      - gtk4.0
+      - gtk4.0>=4.12
       - libadwaita>=1.4
       - json-glib
       - gtk4-layer-shell

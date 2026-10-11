@@ -1,8 +1,3 @@
-.bm-sidebar-window,
-.bm-sidebar-surface {
-  background: transparent;
-}
-
 dialog.bm-sidebar-dialog floating-sheet > dimming,
 dialog.bm-sidebar-dialog bottom-sheet > dimming {
   background-color: rgba(0, 0, 0, 0.42);

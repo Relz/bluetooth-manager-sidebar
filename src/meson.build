@@ -1,7 +1,7 @@
 glib_dep = dependency('glib-2.0', version: '>=2.76')
 gio_dep = dependency('gio-2.0', version: '>=2.76')
 gio_unix_dep = dependency('gio-unix-2.0', version: '>=2.76')
-gtk_dep = dependency('gtk4', version: '>=4.10')
+gtk_dep = dependency('gtk4', version: '>=4.12')
 adw_dep = dependency('libadwaita-1', version: '>=1.4')
 json_glib_dep = dependency('json-glib-1.0')
 layer_shell_dep = dependency('gtk4-layer-shell-0')

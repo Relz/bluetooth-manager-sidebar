@@ -8,7 +8,7 @@ license=('GPL-3.0-or-later')
 keywords=('bluetooth' 'bluetooth-manager' 'bluez' 'wayland' 'layer-shell' 'sidebar' 'gtk4' 'libadwaita' 'obex' 'file-transfer')
 depends=(
   'glib2'
-  'gtk4'
+  'gtk4>=4.12'
   'libadwaita'
   'json-glib'
   'gtk4-layer-shell'

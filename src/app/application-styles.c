@@ -27,6 +27,20 @@ static CssLoadStatus application_load_css_provider(const char *css_path,
                                                       gboolean required,
                                                       GtkCssProvider **provider_out);
 
+/* Keep the fullscreen overlay transparent despite global GTK user styles. */
+static void
+application_install_overlay_css(GdkDisplay *display)
+{
+  GtkCssProvider *provider = gtk_css_provider_new();
+
+  gtk_css_provider_load_from_string(provider,
+                                   ".bm-sidebar-window, .bm-sidebar-surface { background: transparent; }");
+  gtk_style_context_add_provider_for_display(display,
+                                             GTK_STYLE_PROVIDER(provider),
+                                             GTK_STYLE_PROVIDER_PRIORITY_USER);
+  g_object_unref(provider);
+}
+
 gboolean
 application_styles_install(Application *self)
 {
@@ -47,6 +61,7 @@ application_styles_install(Application *self)
                                              GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
   g_object_unref(provider);
 
+  application_install_overlay_css(display);
   application_reload_user_css(self);
   return TRUE;
 }

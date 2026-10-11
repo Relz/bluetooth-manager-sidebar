@@ -18,7 +18,7 @@ The app opens as a right-side layer-shell panel and provides quick access to Blu
 ## Requirements
 
 - GLib/GIO, including GIO Unix support.
-- GTK 4 and libadwaita.
+- GTK 4.12 or newer and libadwaita.
 - `gtk4-layer-shell`.
 - JSON-GLib.
 - BlueZ on the system bus.
@@ -79,7 +79,7 @@ Users can override packaged styles by creating `$XDG_CONFIG_HOME/bm-sidebar/bm-s
 
 GitHub Actions also publishes AUR source metadata for `bm-sidebar` when the `AUR_SSH_PRIVATE_KEY` GitHub secret is configured. It renders `packaging/aur/PKGBUILD.in` with the tag version and repository URL, computes the source checksum and `.SRCINFO` in an Arch Linux container, then pushes `PKGBUILD` and `.SRCINFO` to `ssh://aur@aur.archlinux.org/bm-sidebar.git`.
 
-Native packages rely on distro-provided GLib 2.76 or newer, GTK 4.10 or newer, libadwaita 1.4 or newer, JSON-GLib, BlueZ, BlueZ OBEX, `gtk4-layer-shell`, `pactl`, and `rfkill`. Audio-profile dependency names vary by distro: Debian/Ubuntu and Fedora/RHEL-family packages use `pulseaudio-utils`, Arch Linux uses `libpulse`, and Alpine uses `pulseaudio-utils`. Arch Linux provides `rfkill` through `util-linux`.
+Native packages rely on distro-provided GLib 2.76 or newer, GTK 4.12 or newer, libadwaita 1.4 or newer, JSON-GLib, BlueZ, BlueZ OBEX, `gtk4-layer-shell`, `pactl`, and `rfkill`. Audio-profile dependency names vary by distro: Debian/Ubuntu and Fedora/RHEL-family packages use `pulseaudio-utils`, Arch Linux uses `libpulse`, and Alpine uses `pulseaudio-utils`. Arch Linux provides `rfkill` through `util-linux`.
 
 ## Project Layout
 
